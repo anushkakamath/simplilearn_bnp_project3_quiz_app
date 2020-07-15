@@ -1,0 +1,68 @@
+<app-navbar></app-navbar>
+<div class="row">
+    <div class="col s8 offset-s2">
+      <h2 class="header">Completed!</h2>
+      <div class="card horizontal">
+        <div class="card-image">
+          <img src="../../assets/img/trophy.jpeg" style="width: 250px;height : 250px;">
+        </div>
+        <div class="card-stacked">
+          <div class="card-content">
+            <h3>{{quizService.correctAnswerCount}}/10</h3>
+          </div>
+          <div class="card-action">
+            <h5> Try Again? </h5>
+          </div>
+        </div>
+        <a class="btn-floating halfway-fab waves-effect waves-light red" (click)="restart()">
+          <i class="material-icons">replay</i>
+        </a>
+      </div>
+      
+      <!-- Qn with correct answer -->
+      <h3>Questions with correct answer</h3>
+      <ng-container *ngFor="let qn of quizService.qns;let i=index">
+        <div class="card teal">
+            <div class="card-content white-text">
+                <span class="card-title">{{i+1}}</span>
+                <p>{{qn.question}}</p>
+            </div>
+
+            <div class="card-action">
+                <ul class="collection">
+                    <ng-container >
+                      <li class="collection-item">
+                          {{qn.option1}}
+                          <span class="badge" *ngIf="qn.correct==1">
+                              <i class="material-icons green-text">check_circle</i>
+                          </span>
+                          <span class="badge red-text" *ngIf="qn.answer==1 && qn.correct!=1">Incorrect</span>
+                      </li>
+                      <li class="collection-item">
+                          {{qn.option2}}
+                          <span class="badge" *ngIf="qn.correct==2">
+                              <i class="material-icons green-text">check_circle</i>
+                          </span>
+                          <span class="badge red-text" *ngIf="qn.answer==2 && qn.correct!=2">Incorrect</span>
+                      </li>
+                      <li class="collection-item">
+                          {{qn.option3}}
+                          <span class="badge" *ngIf="qn.correct==3">
+                              <i class="material-icons green-text">check_circle</i>
+                          </span>
+                          <span class="badge red-text" *ngIf="qn.answer==3 && qn.correct!=3">Incorrect</span>
+                      </li>
+                      <li class="collection-item">
+                          {{qn.option4}}
+                          <span class="badge" *ngIf="qn.correct==4">
+                              <i class="material-icons green-text">check_circle</i>
+                          </span>
+                          <span class="badge red-text" *ngIf="qn.answer==4 && qn.correct!=4">Incorrect</span>
+                      </li>
+                    </ng-container>
+                </ul>
+            </div>
+        </div>
+    </ng-container>
+  </div>
+</div>

@@ -1,0 +1,54 @@
+.question {
+    font-size: 1.5rem;
+   margin-bottom: 1rem;
+}
+.option {
+    margin: 15px;
+    background: rgba(0,0,0,0.05);
+    padding: 5px;
+    border-radius: 10px;
+    padding-left: 15px;
+    cursor: pointer;
+}
+
+.option:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+  }
+
+#question-number {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    color: darkgrey;
+}
+
+#skip {
+    margin: 15px;
+    background: rgba(253, 181, 181, 0.5);
+    padding: 5px;
+    border-radius: 10px;
+    padding-left: 15px;
+    text-align: center;
+    cursor: pointer;
+
+}
+
+.customBadge {
+    font-size: 0.85rem;
+    font-weight: normal;
+    text-transform: capitalize;
+}
+
+body{
+    background-color:  #FAFBD8;
+}
+
+.correct {
+    background-color: #28a745;
+  }
+  
+  .incorrect{
+    background-color: #dc3545;
+  }

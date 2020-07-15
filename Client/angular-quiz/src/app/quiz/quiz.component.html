@@ -1,0 +1,34 @@
+<app-navbar></app-navbar>
+
+<div class="row" *ngIf="quizService.qns && this.quizService.qnProgress != 10">
+  <div class="col s8 offset-s2">
+    <!--<span>Time Elapsed : {{quizService.displayTimeElapsed()}}</span>-->
+    <div class="progress">
+      <div class="determinate" [style.width.%]="(quizService.qnProgress+1)*10"></div>
+    </div>
+    <div class="card light-blue lighten-3">
+      <div class="card-content black-text">
+        <span class="card-title">{{quizService.qnProgress+1}}</span>
+        <p>{{quizService.qns[quizService.qnProgress].question}}</p>
+      </div>
+      <div class="card-action">
+        <ul class="collection answer">
+          <li class="collection-item" (click)="Answer(quizService.qns[quizService.qnProgress].id,1)">
+            {{quizService.qns[quizService.qnProgress].option1}}
+          </li>
+          <li class="collection-item" (click)="Answer(quizService.qns[quizService.qnProgress].id,2)">
+            {{quizService.qns[quizService.qnProgress].option2}}
+          </li>
+          <li class="collection-item" (click)="Answer(quizService.qns[quizService.qnProgress].id,3)">
+            {{quizService.qns[quizService.qnProgress].option3}}
+          </li>
+          <li class="collection-item" (click)="Answer(quizService.qns[quizService.qnProgress].id,4)">
+            {{quizService.qns[quizService.qnProgress].option4}}
+          </li>
+
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
