@@ -1,4 +1,4 @@
-##ONLINE TEST APPLICATION (PROJECT 3)                                                                          
+## ONLINE TEST APPLICATION (PROJECT 3)                                                                          
 BY ANUSHKA KAMATH                                                                                                                    15/07/2020
 GitHub Link:  https://github.com/anushkakamath/simplilearn_bnp_project3_quiz_app.git
 
